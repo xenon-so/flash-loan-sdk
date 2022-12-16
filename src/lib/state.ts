@@ -1,6 +1,6 @@
 import { PublicKey } from '@solana/web3.js';
 import BN from 'bn.js';
-import { bool, Layout, option, publicKey, u64 , struct, u8, u32, u16} from '@project-serum/borsh';
+import { Layout, publicKey, u64 , struct, u8, u16} from '@project-serum/borsh';
 // import { struct, u8, u32, u16  } from 'buffer-layout';
 
 export interface FlashPoolState {

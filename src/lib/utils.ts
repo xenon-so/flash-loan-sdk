@@ -30,78 +30,75 @@ export const CLOCK_PROGRAM_ID = new PublicKey('SysvarC1ock1111111111111111111111
 export const ASSOCIATED_TOKEN_PROGRAM_ID = new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL')
 
 export async function findProgramAddress(seeds, programId) {
-    const [publicKey, nonce] = await PublicKey.findProgramAddress(seeds, programId)
-    return { publicKey, nonce }
+  const [publicKey, nonce] = await PublicKey.findProgramAddress(seeds, programId)
+  return { publicKey, nonce }
+}
+
+
+export async function findAssociatedTokenAddress(walletAddress, tokenMintAddress) {
+  const { publicKey } = await findProgramAddress(
+    [walletAddress.toBuffer(), TOKEN_PROGRAM_ID.toBuffer(), tokenMintAddress.toBuffer()],
+    ASSOCIATED_TOKEN_PROGRAM_ID
+  )
+  return publicKey
+}
+
+export async function createAssociatedTokenAccountIfNotExist(
+  wallet,
+  tokenMintAddress,
+  owner,
+  transaction,
+  connection
+) {
+  const associatedTokenAddress = await findAssociatedTokenAddress(owner, tokenMintAddress)
+
+  const tokenAccount = await connection.getAccountInfo(associatedTokenAddress);
+
+  if (tokenAccount == null) {
+    const keys = [
+      {
+        pubkey: wallet.publicKey,
+        isSigner: true,
+        isWritable: true
+      },
+      {
+        pubkey: associatedTokenAddress,
+        isSigner: false,
+        isWritable: true
+      },
+      {
+        pubkey: owner,
+        isSigner: false,
+        isWritable: false
+      },
+      {
+        pubkey: tokenMintAddress,
+        isSigner: false,
+        isWritable: false
+      },
+      {
+        pubkey: SYSTEM_PROGRAM_ID,
+        isSigner: false,
+        isWritable: false
+      },
+      {
+        pubkey: TOKEN_PROGRAM_ID,
+        isSigner: false,
+        isWritable: false
+      },
+      {
+        pubkey: RENT_PROGRAM_ID,
+        isSigner: false,
+        isWritable: false
+      }
+    ]
+    transaction.add(
+      new TransactionInstruction({
+        keys,
+        programId: ASSOCIATED_TOKEN_PROGRAM_ID,
+        data: Buffer.from([])
+      }))
+    //await signAndSendTransaction(wallet, transaction)
   }
-  
-  
-  export async function findAssociatedTokenAddress(walletAddress, tokenMintAddress) {
-    const { publicKey } = await findProgramAddress(
-      [walletAddress.toBuffer(), TOKEN_PROGRAM_ID.toBuffer(), tokenMintAddress.toBuffer()],
-      ASSOCIATED_TOKEN_PROGRAM_ID
-    )
-    return publicKey
-  }
-  
-  
-  
-  export async function createAssociatedTokenAccountIfNotExist(
-    wallet,
-    tokenMintAddress,
-    owner,
-    transaction,
-    connection
-  ) {
-    const associatedTokenAddress = await findAssociatedTokenAddress(owner, tokenMintAddress)
-    
-    const tokenAccount = await connection.getAccountInfo(associatedTokenAddress);
-    
-    if (tokenAccount == null)
-    {
-      const keys = [
-        {
-          pubkey: wallet.publicKey,
-          isSigner: true,
-          isWritable: true
-        },
-        {
-          pubkey: associatedTokenAddress,
-          isSigner: false,
-          isWritable: true
-        },
-        {
-          pubkey: owner,
-          isSigner: false,
-          isWritable: false
-        },
-        {
-          pubkey: tokenMintAddress,
-          isSigner: false,
-          isWritable: false
-        },
-        {
-          pubkey: SYSTEM_PROGRAM_ID,
-          isSigner: false,
-          isWritable: false
-        },
-        {
-          pubkey: TOKEN_PROGRAM_ID,
-          isSigner: false,
-          isWritable: false
-        },
-        {
-          pubkey: RENT_PROGRAM_ID,
-          isSigner: false,
-          isWritable: false
-        }
-      ]
-      transaction.add(
-        new TransactionInstruction({
-          keys,
-          programId: ASSOCIATED_TOKEN_PROGRAM_ID,
-          data: Buffer.from([])
-        }))
-      //await signAndSendTransaction(wallet, transaction)
-    }
-    return associatedTokenAddress
-  }
+  return associatedTokenAddress
+}

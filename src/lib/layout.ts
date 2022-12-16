@@ -3,7 +3,6 @@ import {
     nu64,
     struct,
     u16,
-    u32,
     Union,
 } from 'buffer-layout';
 import BN from 'bn.js';

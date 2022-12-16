@@ -238,7 +238,6 @@ export class XenonFlashLoanClient {
         quantity: BN,
     ) : Promise<BN> {
         const flashPool =  PublicKey.findProgramAddressSync([mintAddress.toBuffer(), fee.toArrayLike(Buffer, 'le', 2)], programId)
-        console.log("flashPool: ",flashPool[0].toBase58());
     
         const flashPoolInfo = await this.connection.getAccountInfo(flashPool[0],'processed');
         if(!flashPoolInfo){
@@ -252,15 +251,12 @@ export class XenonFlashLoanClient {
         // get total supply of poolMint
         const mintAccountInfo = await getMint(this.connection, flashPoolMint[0]);
         const supply = new BN(mintAccountInfo.supply.toString()) 
-        // console.log("supply:",supply.toString())
 
         // get pool base token deposits
         const tokenAmount = await this.connection.getTokenAccountBalance(flashPoolStateData.vault);
         const baseTokenDeposits =  new BN(tokenAmount.value.uiAmount * 10**tokenAmount.value.decimals);
-        // console.log("baseTokenDeposits:",baseTokenDeposits.toString());
 
         const baseTokenReturns = baseTokenDeposits.div(supply).mul(quantity);
-        // console.log("baseTokenReturns:",baseTokenReturns.toString())
         return baseTokenReturns;
 
     }
