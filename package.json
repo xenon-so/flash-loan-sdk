@@ -1,6 +1,6 @@
 {
   "name": "@xenon/flash-loan-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Package for creating xenon compatible solana flash loan instructions",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
