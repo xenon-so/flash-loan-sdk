@@ -1,0 +1,624 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>XenonFlashLoanClient | @xenon_so/flash-loan-sdk</title>
+	<meta name="description" content="Documentation for @xenon_so/flash-loan-sdk">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@xenon_so/flash-loan-sdk</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="xenonflashloanclient.html">XenonFlashLoanClient</a>
+				</li>
+			</ul>
+			<h1>Class XenonFlashLoanClient</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>This client is mainly for demo purposes to show you how to use the Instructions class</p>
+					</div>
+					<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+						<h3>Example</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">import</span> { XenonFlashLoanClient } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@xenon/flash-loans&#x27;</span>
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> XenonFlashLoanClient(connection);
+<span class="hljs-keyword">const</span> transaction = <span class="hljs-keyword">new</span> Transaction();
+<span class="hljs-keyword">await</span> client.initializeXenonAccount(..., transaction, ...);
+</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">XenonFlashLoanClient</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="xenonflashloanclient.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="xenonflashloanclient.html#connection" class="tsd-kind-icon">connection</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#createflashpool" class="tsd-kind-icon">create<wbr>Flash<wbr>Pool</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#createguard" class="tsd-kind-icon">create<wbr>Guard</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#createloan" class="tsd-kind-icon">create<wbr>Loan</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#deposit" class="tsd-kind-icon">deposit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#getflashpoolinfo" class="tsd-kind-icon">get<wbr>Flash<wbr>Pool<wbr>Info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#getreturnsforpooltokens" class="tsd-kind-icon">get<wbr>Returns<wbr>For<wbr>Pool<wbr>Tokens</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#initiateflashloan" class="tsd-kind-icon">initiate<wbr>Flash<wbr>Loan</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="xenonflashloanclient.html#withdraw" class="tsd-kind-icon">withdraw</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Xenon<wbr>Flash<wbr>Loan<wbr>Client<span class="tsd-signature-symbol">(</span>connection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Connection</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="xenonflashloanclient.html" class="tsd-signature-type">XenonFlashLoanClient</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L20">lib/xenonFlashLoanClient.ts:20</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>connection: <span class="tsd-signature-type">Connection</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="xenonflashloanclient.html" class="tsd-signature-type">XenonFlashLoanClient</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="connection" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> connection</h3>
+					<div class="tsd-signature tsd-kind-icon">connection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Connection</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L20">lib/xenonFlashLoanClient.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createflashpool" class="tsd-anchor"></a>
+					<h3>create<wbr>Flash<wbr>Pool</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Flash<wbr>Pool<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, transaction<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L28">lib/xenonFlashLoanClient.ts:28</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new Flash pool with the given mint and fee</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> transaction: <span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol"> = new Transaction()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createguard" class="tsd-anchor"></a>
+					<h3>create<wbr>Guard</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Guard<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionInstruction</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L178">lib/xenonFlashLoanClient.ts:178</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p> generates a Guard Instruction to be added to the flash loan transaction</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fee: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 10</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionInstruction</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createloan" class="tsd-anchor"></a>
+					<h3>create<wbr>Loan</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Loan<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionInstruction</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L149">lib/xenonFlashLoanClient.ts:149</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>gets a loan from a flashpool with the given fee and mint</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>quantity: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TransactionInstruction</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deposit" class="tsd-anchor"></a>
+					<h3>deposit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">deposit<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, transaction<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L72">lib/xenonFlashLoanClient.ts:72</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>deposit into a Xenon Flashpool with a given Mint and fee</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>quantity: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> transaction: <span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol"> = new Transaction()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getflashpoolinfo" class="tsd-anchor"></a>
+					<h3>get<wbr>Flash<wbr>Pool<wbr>Info</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Flash<wbr>Pool<wbr>Info<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/flashpoolstate.html" class="tsd-signature-type">FlashPoolState</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L55">lib/xenonFlashLoanClient.ts:55</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>get Flash pool info with the given mint and fee</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/flashpoolstate.html" class="tsd-signature-type">FlashPoolState</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getreturnsforpooltokens" class="tsd-anchor"></a>
+					<h3>get<wbr>Returns<wbr>For<wbr>Pool<wbr>Tokens</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Returns<wbr>For<wbr>Pool<wbr>Tokens<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L235">lib/xenonFlashLoanClient.ts:235</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p> gets the number of base tokens which can be redeemed for the given quantity of pool tokens</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>quantity: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="initiateflashloan" class="tsd-anchor"></a>
+					<h3>initiate<wbr>Flash<wbr>Loan</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">initiate<wbr>Flash<wbr>Loan<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, transaction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L208">lib/xenonFlashLoanClient.ts:208</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This function helps you sandwich your transaction with loan and guards instructions</p>
+								</div>
+								<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+									<h3>Example</h3>
+								</a>
+								<pre><code class="language-js">client.initiateFlashLoan(....)
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>quantity: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>transaction: <span class="tsd-signature-type">Transaction</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>transaction</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="withdraw" class="tsd-anchor"></a>
+					<h3>withdraw</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">withdraw<span class="tsd-signature-symbol">(</span>fee<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mintAddress<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span>, owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PublicKey</span>, transaction<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xenon-so/flash-loan-sdk/blob/c7bc841/src/lib/xenonFlashLoanClient.ts#L111">lib/xenonFlashLoanClient.ts:111</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Withdraw from a Xenon Flashpool with a given Mint and fee</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fee: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mintAddress: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5>quantity: <span class="tsd-signature-type">BN</span></h5>
+								</li>
+								<li>
+									<h5>owner: <span class="tsd-signature-type">PublicKey</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> transaction: <span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol"> = new Transaction()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Transaction</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="instructions.html" class="tsd-kind-icon">Instructions</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="xenonflashloanclient.html" class="tsd-kind-icon">Xenon<wbr>Flash<wbr>Loan<wbr>Client</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="xenonflashloanclient.html#connection" class="tsd-kind-icon">connection</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#createflashpool" class="tsd-kind-icon">create<wbr>Flash<wbr>Pool</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#createguard" class="tsd-kind-icon">create<wbr>Guard</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#createloan" class="tsd-kind-icon">create<wbr>Loan</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#deposit" class="tsd-kind-icon">deposit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#getflashpoolinfo" class="tsd-kind-icon">get<wbr>Flash<wbr>Pool<wbr>Info</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#getreturnsforpooltokens" class="tsd-kind-icon">get<wbr>Returns<wbr>For<wbr>Pool<wbr>Tokens</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#initiateflashloan" class="tsd-kind-icon">initiate<wbr>Flash<wbr>Loan</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="xenonflashloanclient.html#withdraw" class="tsd-kind-icon">withdraw</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/flashpoolstate.html" class="tsd-kind-icon">Flash<wbr>Pool<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#associated_token_program_id" class="tsd-kind-icon">ASSOCIATED_<wbr>TOKEN_<wbr>PROGRAM_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#clock_program_id" class="tsd-kind-icon">CLOCK_<wbr>PROGRAM_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#flash_pool_token" class="tsd-kind-icon">FLASH_<wbr>POOL_<wbr>TOKEN</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#flashpoollayout" class="tsd-kind-icon">Flash<wbr>Pool<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#main_flashpool_pda" class="tsd-kind-icon">MAIN_<wbr>FLASHPOOL_<wbr>PDA</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#main_flashpool_pda_dev_net" class="tsd-kind-icon">MAIN_<wbr>FLASHPOOL_<wbr>PDA_<wbr>DEV_<wbr>NET</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#main_flashpool_vault" class="tsd-kind-icon">MAIN_<wbr>FLASHPOOL_<wbr>VAULT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#main_flashpool_vault_dev_net" class="tsd-kind-icon">MAIN_<wbr>FLASHPOOL_<wbr>VAULT_<wbr>DEV_<wbr>NET</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#memo_program_id" class="tsd-kind-icon">MEMO_<wbr>PROGRAM_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#rent_program_id" class="tsd-kind-icon">RENT_<wbr>PROGRAM_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#token_program_id" class="tsd-kind-icon">TOKEN_<wbr>PROGRAM_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#usdc_mint" class="tsd-kind-icon">USDC_<wbr>MINT</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#usdc_mint_dev_net" class="tsd-kind-icon">USDC_<wbr>MINT_<wbr>DEV_<wbr>NET</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#user_public_key" class="tsd-kind-icon">USER_<wbr>PUBLIC_<wbr>KEY</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#wallet_private_key" class="tsd-kind-icon">WALLET_<wbr>PRIVATE_<wbr>KEY</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#connection" class="tsd-kind-icon">connection</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#instructionmaxspan" class="tsd-kind-icon">instruction<wbr>Max<wbr>Span</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#mintaddress" class="tsd-kind-icon">mint<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#wallet" class="tsd-kind-icon">wallet</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#createassociatedtokenaccountifnotexist" class="tsd-kind-icon">create<wbr>Associated<wbr>Token<wbr>Account<wbr>IfNot<wbr>Exist</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#decodemintaccountdata" class="tsd-kind-icon">decode<wbr>Mint<wbr>Account<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#findassociatedtokenaddress" class="tsd-kind-icon">find<wbr>Associated<wbr>Token<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#findprogramaddress" class="tsd-kind-icon">find<wbr>Program<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#main" class="tsd-kind-icon">main</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#sendtransaction" class="tsd-kind-icon">send<wbr>Transaction</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
