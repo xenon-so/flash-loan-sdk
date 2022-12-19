@@ -11,15 +11,11 @@ export const MAIN_FLASHPOOL_PDA_DEV_NET = new PublicKey('2ekTDZ8qBXoxAGjmmLsTQ8e
 export const MAIN_FLASHPOOL_VAULT = new PublicKey('GiWNUGCt4t2QPxuubMTbWzAiJNQibLPdHRm6RkKy1H9x')
 export const MAIN_FLASHPOOL_VAULT_DEV_NET = new PublicKey('5zVjTsmkcSzcbefjybv5tahoi6BgpiGCtuggBWps4aZe')
 
-
 export const FLASH_POOL_TOKEN = new PublicKey('ADm19vVzQ37u7kNaHfBDD7atTUY5uaLvLEvYmpSVYKme')
-
 
 /** @hidden */
 // mainnet
 export const programId = new PublicKey('4s51M1seJDzp3kZ5sV63495giSakiers5GZeu4mWwpXD')
-// devnet 
-// export const programId = new PublicKey('xf1sHquUh1yEVH4QXkiT8EoN9nvaZ6PZKx3wHGNcf3t')
 
 /** @hidden */
 export const SYSTEM_PROGRAM_ID = new PublicKey('11111111111111111111111111111111')
@@ -33,7 +29,6 @@ export async function findProgramAddress(seeds, programId) {
   const [publicKey, nonce] = await PublicKey.findProgramAddress(seeds, programId)
   return { publicKey, nonce }
 }
-
 
 export async function findAssociatedTokenAddress(walletAddress, tokenMintAddress) {
   const { publicKey } = await findProgramAddress(
